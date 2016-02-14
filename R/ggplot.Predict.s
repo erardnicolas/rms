@@ -373,7 +373,7 @@ ggplot.Predict <-
       if(length(groups)) {
         # if(nr == 1 && nc == 1) {
         if(jplot == 1) {
-          colFun <- if(aestype[1] == 'color') colorscale else
+          colFun <- if(aestype[2] == 'color') colorscale else
            get(paste('scale', aestype[1], 'discrete', sep='_'))
           groupLabel <- glabel(groups[1])
           g <- c(g, if(aestype[1] == 'size')
