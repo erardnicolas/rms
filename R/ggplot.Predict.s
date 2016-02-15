@@ -470,7 +470,9 @@ ggplot.Predict <-
       else g <- c(g, "geom_line()")
 
       if(length(groups)) {
+      print(groups)
         for(j in 1 : length(groups)) {
+        print(aestype[j])
           colFun <- if(aestype[j] == 'color') colorscale else
            get(paste('scale', aestype[j], 'discrete', sep='_'))
           groupLabel <- glabel(groups[j], j)
